@@ -1,0 +1,82 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>FORMULÁRIO HTML</title>
+</head>
+<body>
+<h1>Formulários HTML</h1>
+<p>Formulários permitem que o usuário envie informações ao servidor através de campos de dados.<br>
+   Cada campo possui um valor possível que pode ser preenchido, assim como atributos específicos que alteram o funcionamento do formulário.</p>
+<h2>Tipos de Input</h2>
+	<form name="signup" target="_blank" method="post" action="#">
+		<label>Input <strong>text</strong>: </label><input type="text" name="text_input" /> <p> Recebe uma string, por padrão sem nenhuma restrição.</p><br>
+		<label>Input <strong>number</strong>: </label><input type="number" step="5" name="number_input" /> <p> Recebe um número. Pode se usar o atributo "step" para alterar a unidade adicionada.</p><br>
+		<label>Input <strong>range</strong>: </label><input type="range" name="range_input" /> <p>O usuário ajusta o comprimento como parâmetro. Útil para ajustar volume, por exemplo.</p><br>
+		<label>Input <strong>color</strong>: </label><input type="color" name="color_input" />  <p>O usuário é capaz de escolher a cor.</p><br>
+		<label>Input <strong>email</strong>: </label><input type="email" name="email_input" /> <p>Recebe um endereço de email. Não é enviado se não houver @. Normalmente, campos que precisam de validação mais avançada são feitos via Javascript, mas também é possível utilizar validações padrões do navegador.</p><br>
+		<label>Input <strong>url</strong>: </label><input type="url" name="url_input" /> <p>Recebe um endereço de site. Não é enviado se não possuir o protocólo http ou https no endereço.</p><br> 
+		<label>Input <strong>date</strong>: </label><input type="date" name="date_input" /> <p>Recebe uma data especificada pelo usuário. O formato da data é organizada de acordo com o idioma da página ou pelo padrão do navegador do usuário.</p><br>
+		<label>Input <strong>week</strong>: </label><input type="week" name="week_input" /> <p>Recebe uma semana do ano escolhida pelo usuário. Funciona apenas no google chrome e no Microsoft Edge</p><br>
+		<label>Input <strong>file</strong>: </label><input type="file" name="file_input" multiple /> <p>Recebe um arquivo do usuário. Com o atributo multiple é possivel receber mais de 1 arquivo.</p><br>
+		<label>Input <strong>search</strong>: </label><input type="search" name="search_input"/> <p>Recebe uma string. O campo pode apagar o parâmetro inserido.Funciona apenas no google chrome e no Microsoft Edge.</p><br>
+		<button type="submit">Enviar</button>
+	</form>
+<h2>Checkbox e Radio Button</h2>
+<p>Esses inputs permitem que o usuário específique informações de forma mais prática do que digitando as opções.<br>
+Cada um possui suas peculiaridades, que podem ser melhor explicadas com um exemplo. Aqui, iremos simular um pedido de pizza.</p>
+	<form name="pizza" method="post">
+		<h3>Você selecionou pizza de calabresa</h3>
+		
+		<p><b>Quais opções você deseja?</b></p>
+		
+		<input type="checkbox" disabled name="optional[]" value="queijo"> + Queijo <br>
+		<input type="checkbox" name="optional[]" value="calabresa"> + Calabresa <br>
+		<input type="checkbox" name="optional[]" value="cebola"> + Cebola <br>
+		<input type="checkbox" name="optional[]" value="azeitona"> + Azeitona <br>
+		
+		<p>Checkbox permite que mais de uma opção seja selecionada. É caracterizado pelos botões quadrados.<br>
+		Através do atributo "name", o backend identifica que os valores se referem à mesma sessão do formulário.<br>
+		Contudo, neste caso, se os valores forem passados para "optional", sem colchetes, apenas o valor do último checkbox será contabilizado.<br>
+		Isso porque o backend entende que a variável optional é primitiva, ou seja, recebe apenas um valor.<br>
+		Para que um checkbox receba múltiplos valores, como nesse caso, é necessário passar uma lista como variável.<br>
+		Por isso, optional[] é passado com colchetes, assim permitindo que múltiplas opções sejam contabilizadas.<br>
+		Também é possível desabilitar a opção mas deixá-la visível ao usuário com o atributo disabled, como demosntrado na opção + Queijo.</p>
+		
+		
+		<p><b>Borda Recheada?</b></p>
+		
+		<input type="radio" name="borda" value="Sim"> Sim <br>
+		<input type="radio" name="borda" value="Não"> Não <br>
+	
+		<p>Radio permite apenas que um valor seja selecionado no escopo. Ou seja, trabalha geralmentes com valores booleanos ou opções com apenas uma escolha.<br>
+		Através do atributo "name" a página e o backend identificam que as opções pertencem à mesma sessão do formulário, permitindo que apenas um dos botões fique ativo.</p>
+	</form>
+<h2> Tipos de Buttons</h2>
+<p>Botões geralmente tem suas aplicações ampliadas e específicadas através do Javascript. Porém, o HTML permite algumas opções por padrão:</p>
+<p><b>type="button"</b></p>
+<button type="Button">Botão Comum</button>
+<p>Botão comum. Não interaje de nenhuma forma até ter um evento vinculado quando clicado. Esse evento pode ser designado pelo atributo "onclick" ou diretamente via javascript.</p>
+<p><b>type="reset"</b></p>
+<button type="reset">Limpar</button><br>
+<p>Botão que limpa o formulário ao qual está vinculado.</p>
+<p><b>type="submit"</b></p>
+<button type="submit">Enviar</button>
+<P>Botão que envia as informações do formulário ao qual está vinculado.</P>
+<h2>Tag Select</h2>
+<p>Esta tag restringe as opções que o usuário pode selecionar, permitindo assim que o formulário sempre receba as respostas esperadas, sem a possibilidade de o usuário inserir uma resposta indesejada.</p>
+<label>Frutas: </label>
+<select name="fruta" multiple>
+	<option value="" selected >Selecione uma opção</option>
+	<option value="maca">Maçã</option>
+	<option value="banana">Banana</option>
+	<option value="Manga">Manga</option>
+<p>Dentro da tag select, para cada opção de escolha, utilizamos uma tag option. Por padrão, a primeira opção é sempre a selecionada antes do usuário<br>
+Interagir com o selectbox. o Atributo "selected" permite escolher uma das opções como padrão.<br>
+Também podemos utilizar o atributo "multiple" na tag select para permitir o usuário selecionar múltiplas opções da lista.</p>
+</select>
+<h2>Tag Textarea</h2>
+<p>Recebe uma string sem restrições. A área para digitação é maior, permitindo assim que o usuário digite textos mais longos.<br>
+O atributo 'rows' indica quantas linhas o input receberá, aumentando assim sua área de digitação.</p>
+<textarea name="textarea_input" rows="10"></textarea>
+</body>
+</html>
