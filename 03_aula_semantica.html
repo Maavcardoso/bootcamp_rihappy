@@ -29,6 +29,48 @@ mas entender o html ajuda a compreender os futuros atributos passados por css.
     </li>
     </ul>
 </p>
+<h2>Tag div e span</h2>
+<p>Estas tags servem como "tags coringas", pois sua função é encapsular uma sessão da página para assim organizá-la de forma modular.<br>
+Visualmente, essas tags não alteram a aparência do site, sendo necessário o uso de CSS para tal. Essa é a vantagem de se utilizar a DIV, já que podemos definir um estilo para a sessão do site, afetando apenas os elementos filhos.</p>
+<ul>
+	<li><strong>DIV</strong>:Geralmente usado como demarcador de sessão. Por padrão vem com o atributo display: block, assim ocupando a linha horizontal da página.</li>
+	<li><strong>SPAN</strong>: Usado como tag auxiliar para elementos que estejam dentro de uma div, pois por possuir o display padrão não afeta na posição dos outros elementos da página</li>
+</ul>
+<div>
+<p><strong>Exemplos: </strong></p>
+<p>Isto <div>é uma</div> div</p>
+<p>Isto <span>é um</span> span</p>
+<p>Na primeira frase, foi utilizada uma tag div para cobrir as palavras "é uma" e na segunda frase a tag span para cobrir as palavras "é um".<br>
+Perceba que na primeira frase, div quebrou a linha e agora ocupa toda a extensão horizontal. O mesmo não ocorre com o span na segunda frase.</p>
+</div>
+<h2>Tag fieldset</h2>
+<div>
+<p>Esta tag tem como propósito destacar visualmente uma sessão da página, permitindo a separação organizada dos elementos da div.</p>
+<form name="exemplo" method="post">
+	<fieldset>
+	<legend>Dados Pessoais</legend>
+	<label>Nome: </label><input type="text" name="nome"><br>
+	<label>Data de Nascimento: </label><input type="date" name="dataNasc"><br>
+	<label>CPF: </label><input type="text" name="cpf"><br>
+	<label>Nome da mãe: </label><input type="text" name="nomeMae"><br>
+	</fieldset>
+	<button type="reset">Limpar</button>
+	<button type="submit">Enviar</button>
+<p>A tag interna <strong>&lt legend &gt </strong> pode ser usada para criar um rótulo que identifica as informações contidas no fieldset.</p>
+</form>
+</div>
+<h2>Tag embed</h2>
+<div>
+<p>Hoje a tag embed possui uma função obsoleta. Mas seu entendimento nos ajuda a compreender a evolução tecnológica da internet e as minúcias do funcionamento de uma página.</p>
+<p>Nos anos 90 e 2000, as páginas eram muito mais humildes comparadas ao que possuímos hoje: a grande maioria das páginas demoravam para carregar simples imagens, vídeos e até parágrafos de texto. Tanto que, em sua maioria, o conteúdo se limitava a apenas elementos HTML, estilos simples de CSS e interações simples em Javascript.</p>
+<p> Uma página HTML é carregada de cima para baixo simultaneamente, e, portanto, caso uma parte do conteúdo demorasse mais para ser carregada, o usuário só teria acesso ao resto da página assim que esse elemento terminasse de ser baixado.</p>
+<p>Para contornar este problema, os antigos desenvolvedores utilizam a técnica dos <Strong>frames</Strong>, que consistia em carregar diferentes sessões da página como se fossem diferentes páginas. Por mais que ainda demorasse para carregar a página por completo, ao menos o usuário conseguiria acessar os conteúdos mais leves, como textos, mais rapidamente.</p>
+<p>Porém, se uma div possuísse uma parágrafo seguido de um vídeo, por mais que não necessariamente fosse o frame que mais demorasse para carregar, o usuário demoraria muito tempo para ler o texto, já que ele só teria acesso ao conteúdo quando o vídeo terminasse de carregar.</p>
+<p>Dessa problemática surge a utilidade da tag <Strong>Embed</Strong>. Esta tag carrega o conteúdo independente do carregamento do frame, permitindo que conteúdos mais leves fossem disponibilizados antes que o conteúdo dentro da tag terminasse de carregar.</p>
+<p>Por questões de compatibilidade, ainda hoje é possível utilizar a tag embed nas páginas. Contudo, com a tecnologia atual do <Strong>HTML 5</Strong>, que disponibiliza tags com semântica mais relevante e clara, tornou o uso do embed obsoleto em sites modernos.</p>
+<p>A tag embed pode inserir qualquer conteúdo multimídia à página, desde tecnologias obsoletas como animações em Flash Player até vídeos e imagens. Porém, hoje em dia existem tags específicas para cada caso, como img para imagens e vídeo para vídeos. Além de essas tags fornecerem conteúdo multimidia, também tornam a semântica do site mais otimizada, pois o motor de busca ou leitura sabe que aquele elemento se trata de uma imagem ou vídeo, enquanto embed pode ser qualquer conteúdo multimídia.</p> 
 
+</p>
+</div>
 </body>
 </html>
