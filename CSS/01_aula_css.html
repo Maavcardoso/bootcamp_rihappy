@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AULA 1 CSS</title>
+        <style>
+            .css_interno{
+                background-color: #00df00;
+                color:#ffffff;
+                font-size:16px;
+                font-weight:bolder;
+            }
+        </style>
+        <link rel="stylesheet" href="./assets/css/01aula.css">
+    </head>
+    <body>
+        <main>
+            <h1>INTRODUÇÃO AO CSS</h1>
+            <section class="aula_1">
+                <article>
+                    <h2>Formas de declaração</h2>
+                    <ul>
+                        <li>
+                            <h2>Inline</h2>
+                            <p>
+                                O código CSS é adicionado com o atributo &lt;style&gt; diretamente na tag HTML, um a um. Tem prioridade sobre outras formas de declaração.
+                                <br>Exemplo: 
+                            </p>
+                            <P style="background-color: #0000ff; color:#ffffff;font-size: 16px;font-weight: bolder;">
+                                CSS INLINE
+                            </P>
+                            <p style="color:#df0000">
+                                &lt;p style="background-color: #0000ff; color:#ffffff;font-size: 16px;font-weight: 
+                                bolder;"&gt;CSS INLINE&lt;/p&gt;
+                            </p>
+                        </li>
+                        <li>
+                            <h2>Interno</h2>
+                            <p>
+                                É adicionado dentro da tag head da página HTML. Dentro de head, adicionamos a tag style e adicionamos o CSS nesta área.
+                            </p>
+                            <p class="css_interno">
+                                CSS INTERNO
+                                <br>
+                            </p>
+                            <i>Inspecione o elemento head com a tecla F12 e veja o código do estilo acima.</i>
+                            
+                        </li>
+                        <li>
+                            <h2>Externo</h2>
+                            <p>
+                                É criado um arquivo com a extensão .css com todas as regras CSS que queremos aplicar. 
+                                O mesmo estilo pode ser utilizado em diferentes paginas.
+                                <br>
+                                Esse arquivo é referenciado no HTML da página através da tag <strong>link dentro da tag head.
+                                </strong>
+                            </p>
+                            <p class="css_externo">
+                                CSS EXTERNO
+                            </p>
+                            <i>&lt;link rel="stylesheet" href="./assets/css/01aula.css"&gt;</i>
+                        </li>
+                    </ul>
+                </section>
+        </main>
+    </body>
+</html>
