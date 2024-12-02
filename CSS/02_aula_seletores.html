@@ -5,8 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SELETORES CSS</title>
     <style>
-        /*Exemplo de seletor de tag*/
+		h4{
+			background-color:#ff0000;
+			color:#ffffff
+		}
         
+		.cssclass{
+			background-color:#0000ff;
+			color:#ffff00
+		}
+		
+		.letra-maiuscula{
+			text-transform:uppercase;
+		}
+		
+		#cssid{
+			background-color:#00ff00;
+			color:#0000dd
+		}
+		
+		*{
+			font-weight: bold;
+		}
+		
     </style>
 </head>
 <body>
@@ -15,26 +36,63 @@
             <h1>SELETORES CSS</h1>
             <ul>
                 <li>
-                    <p><strong>Seletor por Tipo: </strong>
-                    Busca elementos por uma tag HTML especifica</p>
+                    <h4><p><strong>Seletor por Tipo: </strong>
+                    Busca elementos por uma tag HTML especifica</p></h4>
                 </li>
                 <li>
-                    <p><strong>Seletor por ID (#):</strong>
-                    Busca elementos através do atributo id</p>
+                    <p id="cssid"><strong>Seletor por ID (#):</strong>
+                    Busca elementos através do atributo id.
+					Uma ID pertence a apenas um elemento.</p>
                 </li>
                 <li>
-                    <p><strong>Seletor por Classe (.):</strong>
-                    Busca elementos através do atributo class</p>
+                    <p class="cssclass letra-maiuscula"><strong>Seletor por Classe (.):</strong>
+                    Busca elementos através do atributo class. 
+					Um elemento pode ter mais de uma classe, separando cada classe com espaço no atributo "class"
+					e uma classe pode ser utilizada em vários elementos.</p>
                 </li>
                 <li>
                     <p><strong>Seletor Universal (*):</strong>
-                    Seleciona todos os elementos HTML</p>
+                    Seleciona todos os elementos HTML. 
+					Por exemplo, todos os elementos nesta página estão em negrito.</p>
                 </li>
                 <li>
                     <p><strong>Seletor de atributo ([atrib]):</strong>
                     Seleciona elementos que possuem um atributo especifico em
                     nosso documento HTML e conseguimos também buscar atributos
                     com um valor específico.</p>
+					
+					<ul>
+						<h3>Operadores de busca</h3>
+						<fieldset>
+						<li>
+							<p><strong>[attr = value]</strong>: Seleciona o elemento com nome attr que contenha o valor exatamente value.
+							<br><a title="youtube" href="https://www.youtube.com">Youtube</a></p>
+						</li>
+						<li>
+							<p><strong>[attr ~= value]</strong>: Seleciona o elemento com atributo de nome attr, o qual value é uma lista de palavras separadas por espaços, e uma dessas é exatamente value.
+							<br><a title="wikipedia" href="https://www.wikipedia.com">Wikipedia</a></p>
+						</li>
+						<li>
+							<p><strong>[attr |= value]</strong>: Seleciona o elemento com atributo de nome attr, o qual o valor pode ser exatamente value ou pode começar com value imediatamente seguido por hífen.
+							<br><a title="google" href="https://www.google.com">Google</a></p>
+						</li>
+						<li>
+							<p><strong>[attr ^= value]</strong>: Seleciona o elemento com o atributo de nome attr, que tem como valor prefixado por value (começa com value).
+							<br><a title="github" href="https://www.github.com">Github</a></p>
+						</li>
+						<li>
+							<p><strong>[attr $= value]</strong>: Seleciona o elemento com o atributo de nome attr, que tem como sufixo por value (termina com value).
+							<br><a title="" href=""></a></p>
+						</li>
+						<li>
+							<p><strong>[attr *= value]</strong>: Seleciona o elemento com atributo de nome attr, o qual valor contém ao menos uma ocorrência de value.
+							<br><a title="" href=""></a></p>
+						</li>
+						</fieldset>
+					</ul>
+					
+					
+					
                 </li>
             </ul>
         </article>
