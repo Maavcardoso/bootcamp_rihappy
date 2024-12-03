@@ -9,7 +9,7 @@
             font-weight: bold;
         }
 
-        blockquote.terceiro,h1{
+        blockquote.terceiro,#video1{
             background-color: #eeeeee
         }
 
@@ -18,7 +18,7 @@
 <body>
     <main>
         <article>
-            <h1>Agrupamento de Seletores</h1>
+            <h2 id="video1">Agrupamento de Seletores</h2>
             <p id="primeiro">Podemos aplicar as mesmas regras CSS para vários seletores diferentes. 
                 Para isso, podemos separar os seletores utilizando uma virgula.<br>
                 Assim, não precisamos copiar e colar o código para todos, basta escrever
@@ -31,6 +31,32 @@
                 Kissing with golden face the meadows green,
                 Gilding pale streams with heavenly alchemy.<br>- Soneto 33 -Willian Shakespare</blockquote>
         </article>
+		<article>
+			<h2 id="video2">Combinadores Descendentes</h2>
+			<ul>
+				<li id="lista-01">
+					<div>Lista 1</div>
+					<ul id="sublista-01">
+						<li>Subitem A</li>
+						<li>Subitem B</li>
+					</ul>
+				</li>
+				<li id="lista-02">
+					<div>Lista 2</div>
+					<ul id="sublista-02">
+						<li>Subitem A</li>
+						<li>Subitem B</li>
+					</ul>
+				</li>
+				<li id="lista-03">
+					<div>Lista 3</div>
+					<ul id="sublista-03">
+						<li>Subitem A</li>
+						<li>Subitem B</li>
+					</ul>
+				</li>
+			</ul>
+		</article>
     </main>   
 </body>
 </html>
