@@ -12,6 +12,11 @@
         blockquote.terceiro,#video1{
             background-color: #eeeeee
         }
+		
+		#lista-01 li{
+			background-color:#88ff88;
+			color:#ff0000;
+		}
 
     </style>
 </head>
@@ -32,30 +37,24 @@
                 Gilding pale streams with heavenly alchemy.<br>- Soneto 33 -Willian Shakespare</blockquote>
         </article>
 		<article>
-			<h2 id="video2">Combinadores Descendentes</h2>
-			<ul>
-				<li id="lista-01">
+			<h2 id="video2">Combinadores</h2>
+			<p>Combinadores são o tipo de relação entre dois 2 seletores, seguindo a ordem:<br>
+			<strong>[SELETOR] [COMBINADOR] [SELETOR]</strong></p>
+			<ol id="tipos_combinadores">
+				<li>Combinador descendente (espaço);</li>
+				<li>Combinador filho (>);</li>
+				<li>Combinador irmão adjacente (+);</li>
+				<li>Combinador irmão em geral (-);</li>
+			</ol>
+			<h3>Combinador Descendente</h3>
+			<p>Combina dois seletores para que os elementos correspondidos pelo segundo seletor 
+			sejam selecionados se eles tiverem um elemento ancestral correspondente ao primeiro seletor.</p>
 					<div>Lista 1</div>
 					<ul id="sublista-01">
 						<li>Subitem A</li>
 						<li>Subitem B</li>
 					</ul>
-				</li>
-				<li id="lista-02">
-					<div>Lista 2</div>
-					<ul id="sublista-02">
-						<li>Subitem A</li>
-						<li>Subitem B</li>
-					</ul>
-				</li>
-				<li id="lista-03">
-					<div>Lista 3</div>
-					<ul id="sublista-03">
-						<li>Subitem A</li>
-						<li>Subitem B</li>
-					</ul>
-				</li>
-			</ul>
+				
 		</article>
     </main>   
 </body>
