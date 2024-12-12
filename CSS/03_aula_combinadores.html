@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agrupamento de Seletores</title>
     <style>
-        #primeiro,[title="segundo"] {
+        #primeiro,[title="segundo"]{
             font-weight: bold;
         }
 
@@ -16,6 +16,21 @@
 		#lista-01 li{
 			background-color:#88ff88;
 			color:#ff0000;
+		}
+		
+		#lista-02 > p{
+			background-color: #0000ff;
+			color:#ffff00
+		}
+		
+		.irmao-adj + p{
+			background-color: #ff00ff;
+			color:#00ffff
+		}
+		
+		.irmao-ger ~ p{
+			background-color: #ff0000;
+			color:#ffffff
 		}
 
     </style>
@@ -49,12 +64,52 @@
 			<h3>Combinador Descendente</h3>
 			<p>Combina dois seletores para que os elementos correspondidos pelo segundo seletor 
 			sejam selecionados se eles tiverem um elemento ancestral correspondente ao primeiro seletor.</p>
-					<div>Lista 1</div>
+			<fieldset>
+				<div id="lista-01">
+					<h4>Lista 1</h4>
 					<ul id="sublista-01">
 						<li>Subitem A</li>
 						<li>Subitem B</li>
 					</ul>
-				
+				</div>
+			</fieldset>
+			<h3>Combinador Filho</h3>
+			<p>O combinador filho é um seletor que permite direcionar elementos filhos diretos de um elemento pai específico. 
+			Ele cria um caminho de seleção que exclui elementos aninhados além do nível imediatamente abaixo do elemento pai.</p>
+			<fieldset>
+				<div id="lista-02">
+					<p>Parágrafo Externo</p>
+					<fieldset>
+						<div id="div-interna">
+							<p>Parágrafo Interno</p>
+						</div>
+					</fieldset>
+				</div>
+			</fieldset>
+			<h3>Combinador Irmão Adjacente</h3>
+			<p>Aplica o estilo ao elemento selecionado que segue imediatamente o seletor da esquerda
+			e que possua o mesmo div pai.</p>
+			<fieldset>
+				<div id="lista-03">
+					<span class="irmao-adj">Seletor Irmão Adjacente</span>
+					<p>Irmão imediato</p>
+					<p>Irmão mais distante.</p>
+				</div>
+			</fieldset>
+			<h3>Combinador Irmão Adjacente</h3>
+			<p>Aplica o estilo aos elementos que possuam o mesmo div pai do seletor à esquerda.</p>
+			<fieldset>
+				<div id="lista-04">
+					<span class="irmao-ger">Seletor Irmão geral</span>
+					<p>Irmão imediato</p>
+					<fieldset>
+						<div id="div-interna">
+							<p>Parágrafo Interno</p>
+						</div>
+					</fieldset>
+					<p>Irmão mais distante.</p>
+				</div>
+			</fieldset>
 		</article>
     </main>   
 </body>
